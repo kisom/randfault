@@ -1,0 +1,26 @@
+randfault
+
+This is a simple "service" that starts up a listener that might fail.
+
+Flags:
+	-a	address to listen on (default ":8080")
+	-m	failure mode to test (default "timed")
+	-max	upper bound for a timed failure (default 24h0m0s)
+	-min	lower bound for timed failure (default 5m0s)
+	-p	probability service will fail (default 0.5)
+
+I wrote this to have an easily testable thing to demonstrate and learn
+about failure recovery in systems, for example with kubernetes pods.
+
+The -p (probability) flag controls the likelihood (or probability, if
+you will) that the service will fail.
+
+Failure modes:
+
+	timed:	at some time between the configured min and max times,
+		the server will exit with status code 1.
+
+I'd like to add more failure modes and make this more creative, but
+there's no guarantee any of this will happen.
+
+There's a Docker image pushed to kisom/randfault.
