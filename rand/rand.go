@@ -23,6 +23,10 @@ func Between(min, max int64) int64 {
 	return n + min
 }
 
+func N(max int64) int64 {
+	return mrand.Int63n(max)
+}
+
 func Coin(p float64) bool {
 	c := mrand.Float64()
 	return p > c

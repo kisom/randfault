@@ -17,8 +17,15 @@ you will) that the service will fail.
 
 Failure modes:
 
-	timed:	at some time between the configured min and max times,
-		the server will exit with status code 1.
+	hanghealth:	at some point between 0 and the configured max time,
+			the health check will hang.
+	hangindex:	at some point between 0 and the configured max time,
+			the app will hang.
+	timedeath:	at some time between the configured min and max times,
+			the server will exit with status code 1.
+	timesick:	at some time between the configured min and max times,
+			the server health check will start failing with
+			HTTP error code 500.
 
 I'd like to add more failure modes and make this more creative, but
 there's no guarantee any of this will happen.
