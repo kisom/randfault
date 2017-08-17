@@ -25,5 +25,5 @@ func Between(min, max int64) int64 {
 
 func Coin(p float64) bool {
 	c := mrand.Float64()
-	return p <= c
+	return p > c
 }

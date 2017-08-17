@@ -1,7 +1,7 @@
 TARGET :=	randfault
 USER :=		kisom
 REPO :=
-VERSION :=	1.0.0
+VERSION :=	1.0.1
 SOURCES :=	$(shell find . -name \*.go)
 
 .PHONY: all

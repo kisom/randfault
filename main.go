@@ -19,7 +19,7 @@ var response = struct {
 	message string
 }{}
 
-const version = "1.0.0"
+const version = "1.0.1"
 
 func init() {
 	hostname, err := os.Hostname()
